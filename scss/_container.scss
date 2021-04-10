@@ -1,0 +1,30 @@
+$is-container: true;
+
+@function container-class-list($start-index) {
+  $class-list: (".container");
+  @for $i from 1 through $start-index {
+    $class-list: append(
+      $class-list,
+      #{".container-#{nth(nth($break-points,$i),1)}"},
+      comma
+    );
+  }
+  @return $class-list;
+}
+
+@if $is-container {
+  #{container-class-list(length($break-points))},
+  .container-fluid {
+    width: 100%;
+    margin: 0 auto;
+  }
+  @for $i from 1 through length($break-points) {
+    #{container-class-list($i)} {
+      @include media-at-last(
+        #{map-get(nth(nth($break-points, $i), 2), break-point)}px
+      ) {
+        max-width: #{map-get(nth(nth($break-points, $i), 2), max-width)}px;
+      }
+    }
+  }
+}

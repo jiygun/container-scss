@@ -1,0 +1,22 @@
+$break-points: (
+  sm: (
+    break-point: 576,
+    max-width: 540,
+  ),
+  md: (
+    break-point: 768,
+    max-width: 720,
+  ),
+  lg: (
+    break-point: 992,
+    max-width: 960,
+  ),
+  xl: (
+    break-point: 1200,
+    max-width: 1140,
+  ),
+  xxl: (
+    break-point: 1400,
+    max-width: 1320,
+  ),
+);

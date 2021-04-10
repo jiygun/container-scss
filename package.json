@@ -1,0 +1,21 @@
+{
+  "name": "container-scss",
+  "version": "0.0.1",
+  "scripts": {
+    "watch-sass": "node-sass scss/core.scss dist/style.css --watch",
+    "compile-sass": "node-sass scss/core.scss dist/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jiygun/container-scss.git"
+  },
+  "keywords": [
+    "container",
+    "scss"
+  ],
+  "author": "Jiyan Güngen",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}

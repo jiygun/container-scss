@@ -1,0 +1,11 @@
+@mixin media-at-last($break-point) {
+  @media screen and (min-width: $break-point) {
+    @content;
+  }
+}
+
+@mixin media-until-width($break-point) {
+  @media screen and (max-width: $break-point) {
+    @content;
+  }
+}
